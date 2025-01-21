@@ -35,13 +35,13 @@ side of a surface and another form on the other side. A Heaviside function H can
 
 f = H(χ) f⁺ + H(-χ) f⁻
 
-where χ is a level set function, taking a positive value on the + side of the surface and negative value on the - side. The χ=0 level set implicitly defines the surface. Also, the gradient of χ is proportional to the unit normal vector, **n**. In fact, we can always choose this function so that it *is* the local normal.
+where χ is a level set function, taking a positive value on the + side of the surface and a negative value on the - side. The χ=0 level set implicitly defines the surface. Also, the gradient of χ is proportional to the unit normal vector, **n**. In fact, we can always choose this function so that it *is* the local normal.
 
 A really neat thing happens when we take a spatial derivative of f. For example, the gradient:
 
 ∇f = H(χ) ∇f⁺  + H(-χ) ∇f⁻ + δ(χ)n(f⁺ - f⁻)
 
-Then, we get a masked form of the gradient fields of f on either side, *plus* a term involving the jump in f across the surface, times the normal vector, times the Dirac delta function δ(χ). This last factor is the immersion operator: it immerses the surface jump in f into the higher-dimensional space. Other derivatives (e.g., curl, divergence of vector fields) lead to immersion similar terms. If we the divergence of the gradient above, we get a Poisson equation with two immersion terms:
+Then, we get a masked form of the gradient fields of f on either side, *plus* a term involving the jump in f across the surface, times the normal vector, times the Dirac delta function δ(χ). This last factor is the immersion operator: it immerses the surface jump in f into the higher-dimensional space. Other derivatives (e.g., curl, divergence of vector fields) lead to similar immersion terms. If we take the divergence of the gradient above, we get a Poisson equation with two immersion terms:
 
 ∇²f = H(χ) ∇²f⁺ + H(-χ) ∇²f⁻ + δ(χ)n⋅(∇f⁺ - ∇f⁻) +  ∇⋅[δ(χ)n(f⁺ - f⁻)]
 
