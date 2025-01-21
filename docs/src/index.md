@@ -28,13 +28,13 @@ side of a surface and another form on the other side. A Heaviside function $H$ c
 
 $$f = H(\chi) f^+ + H(-\chi) f^-$$
 
-where $\chi$ is a level set function, taking a positive value on the $+$ side of the surface and negative value on the $-$ side. The $\chi=0$ level set implicitly defines the surface. Also, the gradient of $\chi$ is proportional to the unit normal vector, $\mathbf{n}$. In fact, we can always choose this function so that it *is* the local normal.
+where $\chi$ is a level set function, taking a positive value on the $+$ side of the surface and a negative value on the $-$ side. The $\chi=0$ level set implicitly defines the surface. Also, the gradient of $\chi$ is proportional to the unit normal vector, $\mathbf{n}$. In fact, we can always choose this function so that it *is* the local normal.
 
 A really neat thing happens when we take a spatial derivative of $f$. For example, the gradient:
 
 $$\nabla f = H(\chi) \nabla f^+ + H(-\chi) \nabla f^- + \delta(\chi)\mathbf{n}(f^+ - f^-)$$
 
-Then, we get a masked form of the gradient fields of $f$ on either side, *plus* a term involving the jump in $f$ across the surface, times the normal vector, times the Dirac delta function $\delta(\chi)$. This last factor is the immersion operator: it immerses the surface jump in $f$ into the higher-dimensional space. Other derivatives (e.g., curl, divergence of vector fields) lead to immersion similar terms. If we the divergence of the gradient above, we get a Poisson equation with two immersion terms:
+Then, we get a masked form of the gradient fields of $f$ on either side, *plus* a term involving the jump in $f$ across the surface, times the normal vector, times the Dirac delta function $\delta(\chi)$. This last factor is the immersion operator: it immerses the surface jump in $f$ into the higher-dimensional space. Other derivatives (e.g., curl, divergence of vector fields) lead to similar immersion terms. If we take the divergence of the gradient above, we get a Poisson equation with two immersion terms:
 
 $$\nabla^2 f = H(\chi) \nabla^2 f^+ + H(-\chi) \nabla^2 f^- + \delta(\chi)\mathbf{n} \cdot (\nabla f^+ - \nabla f^-) +  \nabla \cdot \left[\delta(\chi)\mathbf{n}(f^+ - f^-) \right]$$
 
